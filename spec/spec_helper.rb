@@ -9,8 +9,11 @@ require 'database_cleaner'
 require 'dm-transactions'
 
 require_relative 'web_helper'
+require_relative 'support/wait_for_ajax'
 
 Capybara.app = MakersBnB
+# Capybara.default_wait_time = 60
+
 RSpec.configure do |config|
   config.include Capybara::DSL
   config.expect_with :rspec do |expectations|
@@ -22,7 +25,7 @@ RSpec.configure do |config|
   end
 
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean_with(:truncation)
   end
 

@@ -34,6 +34,7 @@ def makeRequest
   click_link "view space"
   click_link "2016-08-16"
   click_button "confirm request"
+  click_button "sign out"
   signin
   visit '/requests'
 end

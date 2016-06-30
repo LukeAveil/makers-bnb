@@ -20,14 +20,14 @@ feature 'Date handling' do
     expect(space.available_dates.last.date).to eq(date)
   end
 
-  scenario 'upon booking, booking date removed from available dates' do
+  scenario 'upon booking, booking date removed from available dates', js: true do
     makeRequest
     expect(Space.first.available_dates.first.date).to eq Date.parse('2016-08-16')
     click_button "Approve"
     expect(Space.first.available_dates).to be_empty
   end
 
-  scenario 'upon approval, other requests for that space and date are rejected' do
+  scenario 'upon approval, other requests for that space and date are rejected', js: true do
     makeRequest
     click_button "sign out"
     signup(email: 'jeff@jeff.com')

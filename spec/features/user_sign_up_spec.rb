@@ -20,4 +20,8 @@ feature "User sign-up" do
     expect(User.count).to eq 1
   end
 
+  after(:each) do
+    Capybara.reset_session!
+  end
+
 end

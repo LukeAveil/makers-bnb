@@ -22,6 +22,24 @@ class Calendar
     return date_list
   end
 
+  def forward
+    if @month == 12
+      @month = 1
+      @year += 1
+    else
+      @month += 1
+    end
+  end
+
+  def backward
+    if @month == 1
+      @month = 12
+      @year -= 1
+    else
+      @month -= 1
+    end
+  end
+
   private
 
   def format_date(number)

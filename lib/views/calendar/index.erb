@@ -1,0 +1,12 @@
+<a href="/calendar/backward/<%= params[:id] %>">Previous month</a>
+<a href="/calendar/forward/<%= params[:id] %>">Next month</a>
+
+<% @date_list.each do |date| %>
+	<% if @available_dates.include?(date) %>
+	  <a href="/spaces/<%= params[:id] %>?date=<%= date %>"><%= date %></a>
+    <br>
+	<% else %>
+    <%= date %>
+    <br>
+	<% end %>
+<% end %>

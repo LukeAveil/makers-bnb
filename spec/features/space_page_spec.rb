@@ -1,6 +1,6 @@
 feature "Booking a space" do
 
-	scenario "User selects date" do
+	scenario "User selects date", js: true do
 		signup
 		listSpace
 		click_link "view space"
@@ -8,7 +8,7 @@ feature "Booking a space" do
 		expect(page).to have_xpath("//input[@value='2016-08-16']")
 	end
 
-	scenario "User confirms request" do
+	scenario "User confirms request", js: true do
 		signup
 		listSpace
 		click_link "view space"
