@@ -1,3 +1,12 @@
+My first group project at Makers Academy, to build a clone of AirBnB.
+
+In a group with four other peers, we had 1 week to implement the following user stories.
+
+The idea was to but into practise the skills we have developed over the past 5 weeks, and if we wanted we could try and integrate new technologies. We decided to stick with what we felt most comfortable with and used Sinatra, Ruby, HTML, CSS and jQuery.
+
+We had completed a MVP by close of play on Thursday, Friday was spent refining design and the UI along with implementing a payment system and chat facility.
+
+
 ### User Stories
 
 ```
@@ -11,7 +20,7 @@ I would like to list a space
 
 As a signed up user
 so that i can use the site
-I would like to log in 
+I would like to log in
 
 As a user
 so that I can list all my spaces
